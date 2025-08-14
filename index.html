@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Transparência | Leça FC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="leca.png" />
+  <style>
+    :root{ scroll-behavior:smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+    .container { max-width: 1080px; }
+    .card { @apply bg-gray-50 rounded-xl shadow p-6; }
+    .chip { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800; }
+    .btn { @apply inline-block bg-green-700 text-white px-5 py-2 rounded-full shadow hover:bg-green-800 transition; }
+    .btn-outline { @apply inline-block border border-green-700 text-green-700 px-5 py-2 rounded-full hover:bg-green-50 transition; }
+    .link { @apply text-green-800 underline hover:text-green-900; }
+    .table th { @apply text-left text-sm text-gray-600 font-semibold px-3 py-2; }
+    .table td { @apply text-sm px-3 py-2 align-top; }
+    .table thead { @apply bg-gray-50; }
+    .navlink { position: relative; padding: .375rem .75rem; border-radius: 9999px; font-size: .9rem; font-weight: 700; color: rgba(20,83,45,.9); white-space: nowrap; transition: color .15s ease; }
+    .navlink:hover { color: rgb(20,83,45); }
+    .navlink::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: 6px; height: 2px; background: linear-gradient(90deg, rgba(16,122,16,0), rgba(16,122,16,.6), rgba(16,122,16,0)); transform: scaleX(0); transform-origin: center; transition: transform .2s ease; }
+    .navlink:hover::after { transform: scaleX(1); }
+    .navlink.active { background: transparent; color: #14532D; }
+    section[id]{ scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- HERO -->
+  <header class="relative bg-green-900 text-white py-16 text-center overflow-hidden">
+    <img src="leca.png" alt="Símbolo Leça Futebol Clube" class="w-16 h-16 mx-auto mb-3">
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">Portal de Transparência</h1>
+      <p class="text-lg md:text-2xl mt-3 text-green-100">Informação institucional, financeira e documental do Leça Futebol Clube</p>
+      <p class="text-sm md:text-base mt-2 italic text-green-200">“Transparência, rigor e prestação de contas.”</p>
+    </div>
+  </header>
+
+  <!-- NAV (sem logo e sem botão; responsivo com scroll horizontal) -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="container mx-auto px-6 h-14 flex items-center gap-2 overflow-x-auto no-scrollbar">
+      <a href="#pessoas" class="navlink">Pessoas & Organização</a>
+      <a href="#contratos" class="navlink">Contratos & Info. Financeira</a>
+      <a href="#sustentabilidade" class="navlink">Sustentabilidade</a>
+      <a href="#infraestruturas" class="navlink">Infraestruturas</a>
+      <a href="#documentos" class="navlink">Documentos</a>
+      <a href="#denuncia" class="navlink">Denúncia</a>
+    </div>
+  </nav>
+
+  <!-- INTRO -->
+  <section class="container mx-auto px-6 py-10">
+    <div class="card">
+      <h2 class="text-2xl font-bold text-green-900 mb-2">Como está organizado</h2>
+      <p class="text-gray-700">O portal está dividido em seis áreas, alinhadas com boas práticas de governação. Todo o conteúdo abaixo é <strong>estático</strong> e aponta para documentos (PDF/ZIP) do clube.</p>
+    </div>
+  </section>
+
+  <!-- PESSOAS & ORGANIZAÇÃO -->
+  <section id="pessoas" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Pessoas & Organização</h3>
+      <span class="chip">Institucional</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h4 class="font-semibold text-lg">Órgãos sociais (mandato 2025–2027)</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li>Direção (PDF – composição e pelouros)</li>
+          <li>Conselho Fiscal (PDF)</li>
+          <li>Mesa da Assembleia Geral (PDF)</li>
+          <li>Comissão de Ética (PDF)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold text-lg">Políticas & Códigos</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li>Código de Conduta (PDF)</li>
+          <li>Política de Conflitos de Interesse (PDF)</li>
+          <li>Política de Compras & Contratação (PDF)</li>
+          <li>Estatutos do Clube (PDF)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRATOS & INFO. FINANCEIRA -->
+  <section id="contratos" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Contratos & Informação Financeira</h3>
+      <span class="chip">Financeiro</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h4 class="font-semibold">Orçamentos & Execução</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li><a class="link" href="docs/orcamentos/orc-2025-aprovado.pdf">Orçamento 2025 (Aprovado)</a></li>
+          <li><a class="link" href="docs/execucao/execucao-2025-06.pdf">Execução Orçamental — Jun 2025</a></li>
+          <li><a class="link" href="docs/relatorios/rc-2024.pdf">Relatório & Contas 2024</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold">Contratos relevantes</h4>
+        <div class="overflow-x-auto mt-2">
+          <table class="table min-w-full">
+            <colgroup>
+              <col style="width:15%"><col style="width:35%"><col style="width:35%"><col style="width:15%">
+            </colgroup>
+            <thead>
+              <tr><th>ID</th><th>Entidade</th><th>Objeto</th><th>Valor (€)</th></tr>
+            </thead>
+            <tbody>
+              <tr class="border-t"><td>CT-2025-001</td><td>Fornecedor X</td><td>Equipamentos</td><td>15 000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTENTABILIDADE -->
+  <section id="sustentabilidade" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Sustentabilidade</h3>
+      <span class="chip">ESG</span>
+    </div>
+    <div class="card">
+      <ul class="list-disc pl-6 text-sm text-gray-700">
+        <li><a class="link" href="docs/sustentabilidade/relatorio-2024.pdf">Relatório de Sustentabilidade 2024</a></li>
+        <li><a class="link" href="docs/sustentabilidade/politica-ambiental.pdf">Política Ambiental e de Energia</a></li>
+        <li>Programa de reciclagem nas instalações</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INFRAESTRUTURAS -->
+  <section id="infraestruturas" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Infraestruturas</h3>
+      <span class="chip">Património</span>
+    </div>
+    <div class="card">
+      <div class="overflow-x-auto">
+        <table class="table min-w-full">
+          <colgroup>
+            <col style="width:45%"><col style="width:20%"><col style="width:17.5%"><col style="width:17.5%">
+          </colgroup>
+          <thead>
+            <tr><th>Projeto</th><th>Fase</th><th>Orçamento</th><th>Execução</th></tr>
+          </thead>
+          <tbody>
+            <tr class="border-t"><td>Pavilhão Custódio Antunes</td><td>Em curso</td><td>75 000 €</td><td>32 000 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTOS -->
+  <section id="documentos" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Documentos</h3>
+      <span class="chip">Arquivo</span>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card">
+        <h4 class="font-semibold">Relatórios & Contas</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li><a class="link" href="docs/relatorios/rc-2024.pdf">Relatório & Contas 2024</a></li>
+          <li><a class="link" href="docs/relatorios/rc-2023.pdf">Relatório & Contas 2023</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold">Decisões & Atas</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li><a class="link" href="docs/atas/ata-2025-03-30.pdf">AG 30-03-2025 — Aprovação de contas</a></li>
+          <li><a class="link" href="docs/atas/ata-2025-02-18.pdf">Direção 18-02-2025 — Concurso obra</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="font-semibold">Estatutos & Regulamentos</h4>
+        <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
+          <li><a class="link" href="docs/estatutos/estatutos.pdf">Estatutos</a></li>
+          <li><a class="link" href="docs/regulamentos/regulamento-disciplinar.pdf">Regulamento Disciplinar</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DENÚNCIA -->
+  <section id="denuncia" class="container mx-auto px-6 py-8">
+    <div class="flex items-center gap-3 mb-3">
+      <h3 class="text-2xl font-bold text-green-900">Canais de Denúncia</h3>
+      <span class="chip">Integridade</span>
+    </div>
+    <div class="card">
+      <p class="text-gray-700">Canais internos para comunicação de irregularidades, garantindo confidencialidade e proteção do denunciante (Lei n.º 93/2021). Sendo um portal estático, o botão abaixo pode apontar para um formulário externo (ex.: Microsoft Forms/Google Forms) ou para um endereço de e‑mail dedicado.</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a class="btn" href="#">Submeter denúncia</a>
+        <a class="btn-outline" href="docs/politicas/politica-protecao-denunciante.pdf">Política de proteção do denunciante (PDF)</a>
+      </div>
+      <div class="mt-4 text-sm text-gray-600">
+        <p><strong>Prazos:</strong> acusar receção até 7 dias; feedback até 3 meses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="bg-green-900 text-white py-10 text-center mt-10">
+    <p class="text-2xl font-semibold">Participa no futuro do nosso clube.</p>
+    <p class="mt-2">Contacta: <a href="mailto:geral@somosleca.pt" class="underline">geral@somosleca.pt</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600">
+    &copy; <span id="y"></span> Leça Futebol Clube — Portal de Transparência.
+  </footer>
+
+  <script>
+    // Ano no footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Active link on scroll
+    const ids = ['pessoas','contratos','sustentabilidade','infraestruturas','documentos','denuncia'];
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          document.querySelectorAll('.navlink').forEach(a=>a.classList.remove('active'));
+          const link = document.querySelector(`.navlink[href='#${e.target.id}']`);
+          if(link) link.classList.add('active');
+        }
+      })
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ids.forEach(id=>{ const el=document.getElementById(id); if(el) observer.observe(el); });
+  </script>
+</body>
+</html>
