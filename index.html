@@ -8,23 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="leca.png" />
   <style>
-    :root{ scroll-behavior:smooth; }
-    body { font-family: 'Poppins', sans-serif; }
+    :root { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:#1f2937; }
     .container { max-width: 1080px; }
-    .card { @apply bg-gray-50 rounded-xl shadow p-6; }
-    .chip { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800; }
-    .btn { @apply inline-block bg-green-700 text-white px-5 py-2 rounded-full shadow hover:bg-green-800 transition; }
-    .btn-outline { @apply inline-block border border-green-700 text-green-700 px-5 py-2 rounded-full hover:bg-green-50 transition; }
-    .link { @apply text-green-800 underline hover:text-green-900; }
-    .table th { @apply text-left text-sm text-gray-600 font-semibold px-3 py-2; }
-    .table td { @apply text-sm px-3 py-2 align-top; }
-    .table thead { @apply bg-gray-50; }
+    /* Basic reusable styles (no Tailwind @apply to keep it static-friendly) */
+    .card { background:#f9fafb; border-radius: 0.75rem; box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); padding: 1.5rem; }
+    .chip { display:inline-flex; align-items:center; border-radius:9999px; padding:2px 10px; font-size:12px; font-weight:600; background:#dcfce7; color:#166534; }
+    .btn { display:inline-block; background:#15803d; color:#fff; padding:0.5rem 1.25rem; border-radius:9999px; font-weight:600; box-shadow: 0 2px 6px rgba(0,0,0,.08); transition: all .2s ease; }
+    .btn:hover { background:#166534; box-shadow: 0 4px 12px rgba(0,0,0,.12); transform: translateY(-1px); }
+    .btn-outline { display:inline-block; border:1px solid #15803d; color:#166534; padding:0.5rem 1.25rem; border-radius:9999px; font-weight:600; transition: all .2s ease; }
+    .btn-outline:hover { background:#f0fdf4; }
+    .link { color:#166534; text-decoration: underline; }
+    .table { width:100%; border-collapse: separate; border-spacing: 0; }
+    .table th { text-align:left; font-size:0.9rem; color:#4b5563; font-weight:700; padding:0.5rem 0.75rem; }
+    .table td { font-size:0.9rem; padding:0.5rem 0.75rem; vertical-align: top; }
+    .table thead { background:#f9fafb; }
     .navlink { position: relative; padding: .375rem .75rem; border-radius: 9999px; font-size: .9rem; font-weight: 700; color: rgba(20,83,45,.9); white-space: nowrap; transition: color .15s ease; }
     .navlink:hover { color: rgb(20,83,45); }
     .navlink::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: 6px; height: 2px; background: linear-gradient(90deg, rgba(16,122,16,0), rgba(16,122,16,.6), rgba(16,122,16,0)); transform: scaleX(0); transform-origin: center; transition: transform .2s ease; }
     .navlink:hover::after { transform: scaleX(1); }
     .navlink.active { background: transparent; color: #14532D; }
     section[id]{ scroll-margin-top: 80px; }
+    /* Hide scrollbar for the horizontal nav on mobile */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
   </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -96,7 +103,7 @@
       <div class="card">
         <h4 class="font-semibold">Orçamentos & Execução</h4>
         <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
-          <li><a class="link" href="docs/orcamentos/orc-2025-aprovado.pdf">Orçamento 2025 (Aprovado)</a></li>
+          <li><a class="link" href="docs/orcamentos/orc-2025-aprovado.pdf">Orçamento 2024-2026 (Em Desenvolvimento)</a></li>
           <li><a class="link" href="docs/execucao/execucao-2025-06.pdf">Execução Orçamental — Jun 2025</a></li>
           <li><a class="link" href="docs/relatorios/rc-2024.pdf">Relatório & Contas 2024</a></li>
         </ul>
@@ -183,7 +190,7 @@
         <h4 class="font-semibold">Estatutos & Regulamentos</h4>
         <ul class="list-disc pl-6 mt-2 text-sm text-gray-700">
           <li><a class="link" href="docs/estatutos/estatutos.pdf">Estatutos</a></li>
-          <li><a class="link" href="docs/regulamentos/regulamento-disciplinar.pdf">Regulamento Disciplinar</a></li>
+          <li><a class="link" href="docs/regulamentos/regulamento-disciplinar.pdf">Regulamento Interno</a></li>
         </ul>
       </div>
     </div>
@@ -198,7 +205,7 @@
     <div class="card">
       <p class="text-gray-700">Canais internos para comunicação de irregularidades, garantindo confidencialidade e proteção do denunciante (Lei n.º 93/2021). Sendo um portal estático, o botão abaixo pode apontar para um formulário externo (ex.: Microsoft Forms/Google Forms) ou para um endereço de e‑mail dedicado.</p>
       <div class="mt-4 flex flex-wrap gap-2">
-        <a class="btn" href="#">Submeter denúncia</a>
+        <a href="#" class=""inline-block bg-orange-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 ease-in-out"">Submeter Denúncia</a>
         <a class="btn-outline" href="docs/politicas/politica-protecao-denunciante.pdf">Política de proteção do denunciante (PDF)</a>
       </div>
       <div class="mt-4 text-sm text-gray-600">
