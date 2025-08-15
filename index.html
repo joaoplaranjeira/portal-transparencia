@@ -11,7 +11,6 @@
     :root { scroll-behavior: smooth; }
     body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:#1f2937; }
     .container { max-width: 1080px; }
-    /* Basic reusable styles (no Tailwind @apply to keep it static-friendly) */
     .card { background:#f9fafb; border-radius: 0.75rem; box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); padding: 1.5rem; }
     .chip { display:inline-flex; align-items:center; border-radius:9999px; padding:2px 10px; font-size:12px; font-weight:600; background:#dcfce7; color:#166534; }
     .btn { display:inline-block; background:#15803d; color:#fff; padding:0.5rem 1.25rem; border-radius:9999px; font-weight:600; box-shadow: 0 2px 6px rgba(0,0,0,.08); transition: all .2s ease; }
@@ -29,7 +28,6 @@
     .navlink:hover::after { transform: scaleX(1); }
     .navlink.active { background: transparent; color: #14532D; }
     section[id]{ scroll-margin-top: 80px; }
-    /* Hide scrollbar for the horizontal nav on mobile */
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
   </style>
